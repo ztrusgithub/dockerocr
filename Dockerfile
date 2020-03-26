@@ -60,7 +60,7 @@ RUN apt-get install -y \
 RUN mkdir -p $GOPATH
 
 # go get open-ocr
-RUN go get -u -v -t github.com/ztrus-ocr
+RUN go get -u -v -t github.com/ztrusgithub/ztrus-ocr 
 
 # build open-ocr-httpd binary and copy it to /usr/bin
 RUN cd $GOPATH/src/github.com/tleyden/open-ocr/cli-httpd && go build -v -o open-ocr-httpd && cp open-ocr-httpd /usr/bin
